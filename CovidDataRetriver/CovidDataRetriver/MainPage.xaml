@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CovidDataRetriver.MainPage">
+    
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Global Summary of Corona virus cases"></Label>
+        <Label Text="Total Confirmed cases" 
+           VerticalOptions="StartAndExpand" />
+        <Label x:Name="totalCaseslabel" 
+               VerticalOptions="StartAndExpand" />
+
+        <Label Text="New Confirmed cases" 
+           VerticalOptions="StartAndExpand" />
+        <Label x:Name="newCaseslabel" 
+               VerticalOptions="StartAndExpand" />
+
+        <Label Text="Total Deaths" 
+           VerticalOptions="StartAndExpand" />
+        <Label x:Name="totalDeathslabel" 
+               VerticalOptions="StartAndExpand" />
+
+        <Label Text="New Deaths"  
+           VerticalOptions="StartAndExpand" />
+        <Label x:Name="totalnewDeathslabel" 
+               VerticalOptions="StartAndExpand" />
+
+        <ListView x:Name="contriesList" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Label Text="{Binding Country}" />
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
